@@ -47,7 +47,7 @@ import tags from '../test-data/tags.json';
         "article":{"title":"Uncovering the API techniques with Playwright","description":"We dealt deeper into some of the methods and skill to use in order to understand APIs","body":"Body of the article","tagList":[]}
       },
       headers: {
-        Authorization: accessToken
+        Authorization: `Token ${accessToken}`
       }
     })
   })
