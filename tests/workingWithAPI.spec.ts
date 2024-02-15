@@ -7,14 +7,7 @@ test.beforeEach(async ({page}) =>{
       body: JSON.stringify(tags)
     })
   })
-
-  page.waitForTimeout(1000);
   await page.goto('https://conduit.bondaracademy.com/');
-  await page.getByText('Sign in').click();
-  await page.getByRole('textbox', {name: "Email"}).fill('razz@gmail.com');
-  await page.getByRole('textbox', {name: "Password"}).fill('12345');
-  await page.getByRole('button').click();
-
 })
 
   test('Modify responses', async ({page}) => {
@@ -96,7 +89,7 @@ test.beforeEach(async ({page}) =>{
         Authorization: `Token ${accessToken}`
       }
     })
-    
+
     expect(deleteArticleResponse.status()).toEqual(204);
 
    
